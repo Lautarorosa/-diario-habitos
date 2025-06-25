@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diario de Hábitos ❄️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌨 Diario de Hábitos Personales</h1>
+        <p class="frase">"{{ frase }}"</p>
+
+        <div class="botones">
+            <a href="{{ url_for('registrar') }}" class="boton">Registrar hábitos de hoy</a>
+            <a href="{{ url_for('estadisticas') }}" class="boton secundario">Ver estadísticas</a>
+            <a href="{{ url_for('reset') }}" class="boton reset">Resetear todo</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Hábitos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Registrar hábitos de hoy</h2>
+        <form method="POST">
+            <h3>✅ Hábitos diarios (Sí/No)</h3>
+            {% for hab in habitos_bin %}
+                <label>
+                    {{ hab.replace("_", " ").capitalize() }}
+                    <select name="{{ hab }}">
+                        <option value="1">✅ Sí</option>
+                        <option value="0">❌ No</option>
+                    </select>
+                </label><br>
+            {% endfor %}
+
+            <h3>📊 Datos personales</h3>
+            {% for hab in habitos_extra %}
+                <label>
+                    {{ hab.replace("_", " ").capitalize() }}:
+                    <input type="number" name="{{ hab }}" step="0.1" min="0">
+                </label><br>
+            {% endfor %}
+
+            <br><button type="submit" class="boton">Guardar</button>
+            <a href="/" class="boton secundario">Volver</a>
+        </form>
+    </div>
+</body>
+</html>

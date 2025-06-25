@@ -1,0 +1,2 @@
+2025-06-24;comi_sano:1;entrene:1;medite:0;fui_gimnasio:1;litros_agua:2;peso_actual:77
+2025-06-25;comi_sano:1;entrene:1;medite:1;fui_gimnasio:1;litros_agua:2;peso_actual:80
